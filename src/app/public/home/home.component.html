@@ -1,6 +1,12 @@
 <p>home works!</p>
-<div fxLayout="row wrap" fxLayoutGap="20px"  >
-    <app-card-radio-checked fxFlex *ngFor="let item of this.cardNavigatorSource" [source]="item"></app-card-radio-checked>
+<div fxLayout="row wrap" fxLayoutAlign="center">
+  <div fxFlex="80">
+    <div fxLayout="row wrap"  fxLayoutGap="50px" >
+      <app-card-radio-checked fxFlex *ngFor="let item of this.cardNavigatorSource" [source]="item"
+        [routerLink]="item.routeActive"></app-card-radio-checked>
+    </div>
+
+  </div>
 </div>
 
 <router-outlet></router-outlet>

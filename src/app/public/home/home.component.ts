@@ -25,7 +25,7 @@ export class HomeComponent implements OnInit {
         id: 'pending_payment_count',
         title: 'Personajes',
         count: 0,
-        routeActive: '/dashboard/investments/pending-collection',
+        routeActive: '/home/characters',
         idElement: 'collection',
         classControl: 'collection'
       },
@@ -33,7 +33,7 @@ export class HomeComponent implements OnInit {
         id: 'pending_incomes_count',
         title: 'Estudiantes',
         count: 0,
-        routeActive: '/dashboard/investments/process-of-sales',
+        routeActive: '/home/students',
         idElement: 'processOfSale',
         classControl: 'processOfSale'
       },
@@ -41,7 +41,7 @@ export class HomeComponent implements OnInit {
         id: 'paid_debtor_count',
         title: 'Profesores',
         count: 0,
-        routeActive: '/dashboard/investments/invoice-colleted',
+        routeActive: '/home/teachers',
         idElement: 'invoicesCollected',
         classControl: 'invoicesCollected'
       }
