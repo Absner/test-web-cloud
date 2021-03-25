@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { IActionElementCard } from 'src/app/shared/cards/card-radio-checked/card-radio-checked.component';
+import { IActionElementCard } from '../../shared/components/cards/card-radio-checked/card-radio-checked.component';
 
 @Component({
   selector: 'app-home',
