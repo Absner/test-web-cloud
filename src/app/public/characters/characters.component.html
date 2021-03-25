@@ -1,5 +1,13 @@
-<p>characters works!</p>
-<div fxLayout="row wrap" fxLayoutAlign="center">
+
+<div fxLayout="row wrap" fxLayoutAlign="center" style="margin-top: 3rem; padding-bottom: 4rem;" >
+  <div fxFlex="90" style="text-align: right;" >
+    <mat-form-field appearance="outline" >
+      <mat-label>Casa de hechicería</mat-label>
+      <mat-select [formControl]="this.controlSelect" >
+        <mat-option *ngFor="let item of this.house"  [value]="item">{{item}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
   <div fxFlex="90">
     <app-table-general *ngIf="this.sourceDataTable" [sourceData]="this.sourceDataTable"></app-table-general>
   </div>

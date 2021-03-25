@@ -5,6 +5,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { UploadImageModule } from '../../upload-image/upload-image.module';
 
 
 
@@ -16,7 +17,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     FormsModule,
     MatInputModule,
     MatButtonModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    UploadImageModule
   ],
   exports: [AddStudentsFormComponent],
   entryComponents: [AddStudentsFormComponent]

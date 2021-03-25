@@ -5,6 +5,9 @@ import { CharactersRoutingModule } from './characters-routing.module';
 import { CharactersComponent } from './characters.component';
 import { TableGeneralModule } from '../../shared/components/tables/table-general/table-general.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { MatSelectModule } from '@angular/material/select';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 
 @NgModule({
@@ -13,7 +16,10 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     CommonModule,
     CharactersRoutingModule,
     TableGeneralModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatSelectModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class CharactersModule { }

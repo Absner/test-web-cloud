@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output, ViewChild, AfterViewInit, OnChanges, SimpleChanges } from '@angular/core';
+import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { IPerson } from '../../../../shared/models/person.model';
@@ -28,6 +29,8 @@ export class TableGeneralComponent implements OnInit, AfterViewInit, OnChanges {
   @ViewChild(MatSort) set matSort(ms: MatSort) {
     this.dataSource.sort = ms;
   }
+  
+  @ViewChild(MatPaginator) paginator: MatPaginator;
 
   constructor() { }
 
@@ -35,6 +38,7 @@ export class TableGeneralComponent implements OnInit, AfterViewInit, OnChanges {
   }
 
   ngAfterViewInit(): void {
+    this.dataSource.paginator = this.paginator;
     this.dataSource.sort?.sortChange.subscribe((option: any) => {
       this.sortChange.emit(option);
     });

@@ -37,6 +37,10 @@ export class AddStudentsFormComponent implements OnInit {
       age: new FormControl(null, Validators.required),
       image: new FormControl(null)
     });
+
+    this.form.get('image').valueChanges.subscribe((value: any)  =>  {
+      console.log('change', value);
+    })
   }
 
 }

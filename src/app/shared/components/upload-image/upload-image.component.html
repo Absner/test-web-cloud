@@ -1,0 +1,18 @@
+<label for="fileRef">
+  <div class="container-file" [class.opacity]="this.files.length < 1" DndFile (fileDropped)="getFileUpload($event);">
+    <div class="add-file text-center">
+      <div class="icon-img" >
+        <span class="material-icons">
+          add_photo_alternate
+        </span>
+      </div>
+      <div class="text-center" [class.opacity]="this.files.length > 0">Buscar</div>
+    </div>
+  </div>
+</label>
+<div class="description-file" *ngFor="let item of this.files; let i = index;">
+  {{item.name}}
+  <span (click)="deleteFile();" matTooltip="Eliminar archivo" class="material-icons delete">delete_sweep</span>
+</div>
+<input #fileRef [disabled]="this.isDisabled" type="file" id="fileRef" name="upload-file" (change)="handleFile($event)">
+

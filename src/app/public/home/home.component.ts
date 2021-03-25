@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { IActionElementCard } from '../../shared/components/cards/card-radio-checked/card-radio-checked.component';
 
 @Component({
@@ -10,7 +11,7 @@ export class HomeComponent implements OnInit {
 
   public cardNavigatorSource: Array<IActionElementCard>;
 
-  constructor() { }
+  constructor(public readonly router: Router,) { }
 
   ngOnInit(): void {
     this.createObjects();
@@ -27,7 +28,8 @@ export class HomeComponent implements OnInit {
         count: 0,
         routeActive: '/home/characters',
         idElement: 'collection',
-        classControl: 'collection'
+        classControl: 'collection',
+        iconName: 'icon-cloud i-house'
       },
       {
         id: 'pending_incomes_count',
@@ -35,7 +37,8 @@ export class HomeComponent implements OnInit {
         count: 0,
         routeActive: '/home/students',
         idElement: 'processOfSale',
-        classControl: 'processOfSale'
+        classControl: 'processOfSale',
+        iconName: 'icon-cloud i-students'
       },
       {
         id: 'paid_debtor_count',
@@ -43,9 +46,17 @@ export class HomeComponent implements OnInit {
         count: 0,
         routeActive: '/home/teachers',
         idElement: 'invoicesCollected',
-        classControl: 'invoicesCollected'
+        classControl: 'invoicesCollected',
+        iconName: 'icon-cloud i-teachers'
       }
     ];
+  }
+
+  /**
+   * isActiveRoute
+   */
+  public isActiveRoute(route: string): boolean {
+    return this.router.url === route;
   }
 
 }

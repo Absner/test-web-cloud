@@ -1,0 +1,14 @@
+<svg id="Grupo_11480" data-name="Grupo 11480" xmlns="http://www.w3.org/2000/svg" width="179" height="110" viewBox="0 0 179 110">
+  <g id="Rectángulo_4185" data-name="Rectángulo 4185" fill="#fff" stroke="#274156" stroke-width="1">
+    <rect width="179" height="110" rx="5" stroke="none"/>
+    <rect x="0.5" y="0.5" width="178" height="109" rx="4.5" fill="none"/>
+  </g>
+  <g id="account_box-black-48dp" transform="translate(8.529 34.941)">
+    <path id="Trazado_24996" data-name="Trazado 24996" d="M0,0H59.706V59.706H0Z" fill="none"/>
+    <path id="Trazado_24997" data-name="Trazado 24997" d="M3,7.975V42.8a4.974,4.974,0,0,0,4.975,4.975H42.8A4.99,4.99,0,0,0,47.779,42.8V7.975A4.99,4.99,0,0,0,42.8,3H7.975A4.974,4.974,0,0,0,3,7.975Zm29.853,9.951a7.463,7.463,0,1,1-7.463-7.463A7.453,7.453,0,0,1,32.853,17.926Zm-22.39,19.9c0-4.975,9.951-7.712,14.926-7.712s14.926,2.737,14.926,7.712v2.488H10.463Z" transform="translate(4.463 4.463)" fill="#274156"/>
+  </g>
+  <rect id="Rectángulo_4186" data-name="Rectángulo 4186" width="138.059" height="13.647" transform="translate(23.882 13.647)" fill="#274156" opacity="0.5"/>
+  <rect id="Rectángulo_4187" data-name="Rectángulo 4187" width="93.824" height="13.647" transform="translate(68.118 36.548)" fill="#274156" opacity="0.5"/>
+  <rect id="Rectángulo_4188" data-name="Rectángulo 4188" width="93.824" height="13.647" transform="translate(68.118 59.805)" fill="#274156" opacity="0.5"/>
+  <rect id="Rectángulo_4189" data-name="Rectángulo 4189" width="54.588" height="13.647" transform="translate(107.353 81)" fill="#274156" opacity="0.5"/>
+</svg>

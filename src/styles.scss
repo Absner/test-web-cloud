@@ -1,8 +1,8 @@
-
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
 @import '~@angular/material/theming';
 @import './assets/scss/tables';
+@import './assets/scss/icons/web-cloud-icon/web-cloud-icon';
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,700;1,800;1,900&display=swap');
 
 // Plus imports for other components in your app.
@@ -23,18 +23,14 @@ $web-cloud-services-warn: mat-palette($mat-red);
 
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
-$web-cloud-services-theme: mat-light-theme((
-  color: (
-    primary: $web-cloud-services-primary,
-    accent: $web-cloud-services-accent,
-    warn: $web-cloud-services-warn,
-  )
-));
+$web-cloud-services-theme: mat-light-theme((color: (primary: $web-cloud-services-primary,
+      accent: $web-cloud-services-accent,
+      warn: $web-cloud-services-warn,
+    )));
 
 
 
-$custom-typography: mat-typography-config(
-    $font-family: "Montserrat, sans-serif",
+$custom-typography: mat-typography-config($font-family: "Montserrat, sans-serif",
 );
 // @include mat-core($custom-typography);
 
@@ -44,7 +40,97 @@ $custom-typography: mat-typography-config(
 @include angular-material-theme($web-cloud-services-theme);
 @include angular-material-typography($custom-typography);
 
+:root {
+  --green-primary: #00909B;
+  --green-light: #19D7DB;
+  --green-success: #00D284;
+  --green-medium: #0EC480;
+  --orange-primary: #FF5730;
+  --red-medium: #F1512C;
+  --blue-primary: #248AFD;
+  --blue-light: #00CFF4;
+  --blue-medium: #09CBEE;
+  --purple-primary: #7859DF;
+  --yellow-primary: #FEDF1B;
+  --yellow-medium: #EEDF0C;
+  --yellow-warning: #FFD603;
+  --gray-default: #274156;
+  --green-dark: #183245
+}
+
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: rgba(220, 220, 220, 0.219);
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+@mixin customActionElementActiveCard($background, $textColor) {
+
+  input[type="checkbox"],
+  input[type="radio"] {
+    &:checked {
+      &+label {
+        background: $background 0% 0% no-repeat padding-box !important;
+        color: white !important;
+
+        .header-label {
+          color: $textColor !important;
+          border-bottom: 1px solid #FFFFFF24;
+        }
+
+        span {
+          font-size: 5rem;
+          color: $textColor !important;
+        }
+
+        .icon-element {
+          background-color: $textColor !important;
+          color: $background !important;
+        }
+
+        .content-label {
+          color: $textColor !important;
+        }
+      }
+    }
+  }
+
+  .icon-element {
+    background-color: $background !important;
+  }
+
+  span {
+    font-size: 5rem;
+    color: $background;
+  }
+
+}
+
+.card-radio-checked {
+  &.collection {
+    @include customActionElementActiveCard(var(--red-medium), white);
+  }
+
+  &.processOfSale {
+    @include customActionElementActiveCard(var(--green-medium), white);
+  }
+
+  &.invoicesCollected {
+    @include customActionElementActiveCard(var(--blue-medium), white);
+  }
+
+  &.leaderboard {
+    @include customActionElementActiveCard(var(--yellow-medium), white);
+  }
+}

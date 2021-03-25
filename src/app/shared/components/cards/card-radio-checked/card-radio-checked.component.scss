@@ -77,7 +77,10 @@ label {
             line-height: 4rem;
             font-size: 38px;
             font-weight: 600;
-            margin-top: calc(4rem / 2);
+            
+            span {
+                font-size: 5rem;
+            }
             .icon-element {
                 position: absolute;
                 left: 0;

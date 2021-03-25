@@ -1,3 +1,4 @@
+<h2>Crear nuevo estudiante</h2>
 <form (ngSubmit)="onSubmit()" [formGroup]="this.form">
   <div fxLayout="row wrap">
     <mat-form-field appearance="outline" fxFlex="100">
@@ -15,7 +16,20 @@
       <input matInput placeholder="Placeholder" formControlName="age">
     </mat-form-field>
   </div>
-  <div class="text-center">
+
+  <div fxLayout="row wrap" fxLayoutGap="20px" >
+    <app-upload-image [base64]="true" fxFlex formControlName="image" ></app-upload-image>
+    <div fxFlex class="text-center" >
+      <div class="img-preview" >
+        <img [src]="this.form.get('image').value ? this.form.get('image').value  : '/assets/img/avatar.svg'" alt="img">
+      </div>
+
+    </div>
+
+  </div>
+
+  
+  <div class="text-center" style="margin-top: 1.5rem;">
     <button [disabled]="!this.form.valid" mat-button>Guardar estudiante</button>
   </div>
 </form>

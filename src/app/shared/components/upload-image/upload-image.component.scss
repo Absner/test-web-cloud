@@ -1,0 +1,72 @@
+input[type="file"] {
+  display: none;
+
+  &:disabled {
+    .container-file {
+
+      .add-file {
+        display: inline-block;
+        background-color: #f4f4f4;
+        color: #19D7DB;
+      }
+    }
+  }
+}
+
+label {
+  display: block;
+  width: auto;
+  border: 1px dashed #2628287e;
+  padding: 2rem;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+
+  .container-file {
+    &.opacity {
+      img {
+        opacity: .4;
+      }
+
+    }
+
+    .add-file {
+      color: #19D7DB;
+    }
+  }
+}
+
+.description-file {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-style: italic;
+  font-size: 14px;
+  letter-spacing: 0.50px;
+  color: #274156;
+  font-family: 'Montserrat', sans-serif;
+
+  .material-icons {
+    margin-left: 1rem;
+    font-size: 18px;
+    cursor: pointer;
+
+    &.delete {
+      color: red;
+    }
+  }
+}
+
+.mt-3 {
+  margin-top: 2rem;
+
+  &.opacity {
+    opacity: .4;
+  }
+}
+
+.icon-img {
+  font-size: 5rem;
+  text-align: center;
+  .material-icons {
+    font-size: 5rem;
+  }
+}
