@@ -1,0 +1,21 @@
+<form (ngSubmit)="onSubmit()" [formGroup]="this.form">
+  <div fxLayout="row wrap">
+    <mat-form-field appearance="outline" fxFlex="100">
+      <mat-label>Nombre</mat-label>
+      <input matInput placeholder="Placeholder" formControlName="name">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" fxFlex="100">
+      <mat-label>Patronus</mat-label>
+      <input matInput placeholder="Placeholder" formControlName="patronus">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" fxFlex="100">
+      <mat-label>Edad</mat-label>
+      <input matInput placeholder="Placeholder" formControlName="age">
+    </mat-form-field>
+  </div>
+  <div class="text-center">
+    <button [disabled]="!this.form.valid" mat-button>Guardar estudiante</button>
+  </div>
+</form>

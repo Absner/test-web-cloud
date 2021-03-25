@@ -8,6 +8,8 @@ import { TableGeneralModule } from '../../shared/components/tables/table-general
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatDialogModule } from '@angular/material/dialog';
+import { AddStudentsFormModule } from '../../shared/components/forms/add-students-form/add-students-form.module';
 
 
 @NgModule({
@@ -19,7 +21,9 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     FlexLayoutModule,
     MatButtonModule,
     MatIconModule,
-    MatTooltipModule
+    MatTooltipModule,
+    AddStudentsFormModule,
+    MatDialogModule
   ]
 })
 export class StudentsModule { }
