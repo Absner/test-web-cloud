@@ -1,0 +1,122 @@
+input[type="checkbox"],
+input[type="radio"] {
+    display: none;
+
+    &:not(:disabled)~label {
+        cursor: pointer;
+    }
+
+    &:checked {
+        &+label {
+            color: var(--gray-default);
+            // background: red 0% 0% no-repeat padding-box;
+            box-shadow: 0px 2px 8px #0000004D;
+            border-radius: 4px;
+            transform: scale(1.1);
+
+            // &::after {
+            //   color: white;
+            //   font-family: 'Material Icons';
+            //   content: 'done';
+            //   font-size: 15px;
+            //   position: absolute;
+            //   top: 8px;
+            //   right: 0;
+            //   transform: translateX(-50%);
+            //   height: 24px;
+            //   width: 24px;
+            //   line-height: 22px;
+            //   text-align: center;
+            //   border-radius: 50%;
+            //   background: #19D7DB;
+            //   box-shadow: 0px 2px 5px -2px #19D7DB;
+            // }
+        }
+    }
+
+    &:disabled~label {
+        color: hsla(150, 5%, 75%, 1);
+        border-color: hsla(150, 5%, 75%, 1);
+        box-shadow: none;
+        cursor: not-allowed;
+        opacity: .5;
+    }
+}
+
+label {
+    // font-family: 'Montserrat', sans-serif !important;
+    min-height: 156px;
+    display: block;
+    position: relative;
+    font-weight: normal;
+    
+
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 2px 4px #00000024;
+    border-radius: 4px;
+    transition: all ease-out .2s;
+
+    .header-label {
+        color: var(--gray-default);
+        padding: 0 1rem;
+        line-height: 4rem;
+        border-bottom: 1px solid #00909B24;
+        font-size: 16px;
+        font-weight: 600;
+
+    }
+
+    .content-label {
+        padding: 1rem;
+        text-align: center;
+        height: calc(156px - 4rem);
+        color: var(--gray-default);
+
+        .descriptions {
+            position: relative;
+            line-height: 4rem;
+            font-size: 38px;
+            font-weight: 600;
+            margin-top: calc(4rem / 2);
+            .icon-element {
+                position: absolute;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                width: 48px;
+                height: 48px;
+                background-color: var(--gray-default);
+                color: white;
+                border-radius: 50%;
+                span {
+                    margin-top: calc(24px / 2);
+                }
+            }
+        }
+    }
+
+    &:hover {
+        box-shadow: 0px 3px 10px #00000042;
+        transition: all ease-in .2s;
+    }
+
+    h2,
+    p {
+        text-transform: none;
+    }
+
+    h2 {
+        letter-spacing: 0px;
+        color: #19D7DB;
+        font-size: 16px;
+        margin-bottom: 0;
+    }
+
+    p {
+        font-size: 30px;
+        color: #60D279;
+        margin: 0;
+        // font-weight: 500;
+        letter-spacing: 0.34px;
+    }
+}

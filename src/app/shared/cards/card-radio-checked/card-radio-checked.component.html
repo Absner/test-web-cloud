@@ -1,0 +1,25 @@
+<div *ngIf="this.source;else nothing">
+    <input [id]="this.source.idElement" type="radio" [name]="'only'" [checked]="this.checked" >
+    <label [for]="this.source.idElement">
+        <div class="header-label text-center">
+            {{this.source.title ? this.source.title : "N/D"}}
+        </div>
+        <div class="content-label">
+            <div class="descriptions">
+                <div class="icon-element">
+                    <span class="material-icons">
+                        {{this.source.iconName ? this.source.iconName : "receipt"}}
+                    </span>
+                </div>
+                <span class="count">
+                    {{this.source.count ? this.source.count : "N/D"}}
+                </span>
+            </div>
+        </div>
+    </label>
+</div>
+<ng-template #nothing>
+    <div class="text-center">
+        <h2>Sin objeto inicial</h2>
+    </div>
+</ng-template>

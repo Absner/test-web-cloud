@@ -1,0 +1,6 @@
+<p>home works!</p>
+<div fxLayout="row wrap" fxLayoutGap="20px"  >
+    <app-card-radio-checked fxFlex *ngFor="let item of this.cardNavigatorSource" [source]="item"></app-card-radio-checked>
+</div>
+
+<router-outlet></router-outlet>
