@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { CharactersRoutingModule } from './characters-routing.module';
 import { CharactersComponent } from './characters.component';
 import { TableGeneralModule } from '../../shared/components/tables/table-general/table-general.module';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { TableGeneralModule } from '../../shared/components/tables/table-general
   imports: [
     CommonModule,
     CharactersRoutingModule,
-    TableGeneralModule
+    TableGeneralModule,
+    FlexLayoutModule
   ]
 })
 export class CharactersModule { }

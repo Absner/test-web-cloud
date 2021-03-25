@@ -1,1 +1,7 @@
 <p>teachers works!</p>
+<div fxLayout="row wrap" fxLayoutAlign="center">
+  <div fxFlex="90">
+    <app-table-general *ngIf="this.sourceDataTable" [sourceData]="this.sourceDataTable"></app-table-general>
+  </div>
+
+</div>

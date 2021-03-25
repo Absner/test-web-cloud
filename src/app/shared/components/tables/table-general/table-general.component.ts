@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output, ViewChild, AfterViewInit, OnChanges, SimpleChanges } from '@angular/core';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
+import { IPerson } from '../../../../shared/models/person.model';
 
 @Component({
   selector: 'app-table-general',
@@ -11,14 +12,12 @@ export class TableGeneralComponent implements OnInit, AfterViewInit, OnChanges {
 
   public dataSource = new MatTableDataSource();
   public displayedColumns: string[] = [
-    'code',
-    'created_at',
-    'cant_transaction',
-    'payment_date',
-    'total_amount',
-    'action'
+    'img',
+    'name',
+    'patronus',
+    'age'
   ];
-  @Input() sourceData: Array<any> = [];
+  @Input() sourceData: Array<IPerson> = [];
   @Input() isCharged: boolean;
   @Output() sortChange: EventEmitter<any> = new EventEmitter<
     any

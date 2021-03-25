@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  baseUrl: 'http://hp-api.herokuapp.com/api/characters'
 };
