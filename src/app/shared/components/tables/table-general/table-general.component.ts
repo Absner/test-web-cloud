@@ -1,8 +1,10 @@
 import { Component, EventEmitter, Input, OnInit, Output, ViewChild, AfterViewInit, OnChanges, SimpleChanges } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { IPerson } from '../../../../shared/models/person.model';
+import { ShowAvatarComponent } from '../../show-avatar/show-avatar.component';
 
 @Component({
   selector: 'app-table-general',
@@ -29,10 +31,12 @@ export class TableGeneralComponent implements OnInit, AfterViewInit, OnChanges {
   @ViewChild(MatSort) set matSort(ms: MatSort) {
     this.dataSource.sort = ms;
   }
-  
+
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
-  constructor() { }
+  constructor(
+    private readonly dialog: MatDialog
+  ) { }
 
   ngOnInit(): void {
   }
@@ -48,6 +52,18 @@ export class TableGeneralComponent implements OnInit, AfterViewInit, OnChanges {
     if (change.sourceData && change.sourceData.currentValue) {
       this.dataSource.data = change.sourceData.currentValue;
     }
+  }
+
+  /**
+   * showImage
+   */
+  public showImage(img: any): void {
+    const showAvatarDialog = this.dialog.open(ShowAvatarComponent, {
+      width: 'auto',
+      data: {
+        image: img
+      }
+    })
   }
 
 }

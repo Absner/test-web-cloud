@@ -5,6 +5,8 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
 import { TableGeneralComponent } from './table-general.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { ShowAvatarModule } from '../../show-avatar/show-avatar.module';
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 
@@ -15,7 +17,9 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     MatTableModule,
     MatSortModule,
     MatButtonModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    ShowAvatarModule,
+    MatDialogModule
   ],
   exports: [TableGeneralComponent]
 })
